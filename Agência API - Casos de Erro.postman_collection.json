@@ -1,0 +1,516 @@
+{
+	"info": {
+		"_postman_id": "26081cac-5c64-4456-aac2-50553276b14a",
+		"name": "Agência API - Casos de Erro",
+		"description": "Collection com casos de teste de erro para a API de Agências",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44229383"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Agência - Casos de Erro",
+			"item": [
+				{
+					"name": "Cadastrar Agência - posX Nulo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posY\": -23.5505\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência sem posX (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - posY Nulo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": -46.6333\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência sem posY (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - posX e posY Nulos",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência sem posX e posY (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - posX Fora do Limite (181)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": 181.0,\n    \"posY\": 0.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência com posX > 180 (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - posX Fora do Limite (-181)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": -181.0,\n    \"posY\": 0.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência com posX < -180 (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - posY Fora do Limite (91)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": 0.0,\n    \"posY\": 91.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência com posY > 90 (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - posY Fora do Limite (-91)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": 0.0,\n    \"posY\": -91.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência com posY < -90 (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - JSON Inválido",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": -46.6333,\n    \"posY\": -23.5505,\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência com JSON inválido (vírgula extra) (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - Content-Type Incorreto",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "text/plain"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "posX=-46.6333&posY=-23.5505"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Tenta cadastrar agência com Content-Type incorreto (deve retornar erro 400)"
+					},
+					"response": []
+				}
+			],
+			"description": "Casos de erro para cadastro de agências"
+		},
+		{
+			"name": "Buscar Agências Próximas - Casos de Erro",
+			"item": [
+				{
+					"name": "Buscar Agências - posX Ausente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posY=-23.5505",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posY",
+									"value": "-23.5505"
+								}
+							]
+						},
+						"description": "Tenta buscar agências sem posX (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - posY Ausente",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=-46.6333",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "-46.6333"
+								}
+							]
+						},
+						"description": "Tenta buscar agências sem posY (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - Sem Parâmetros",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							]
+						},
+						"description": "Tenta buscar agências sem parâmetros (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - posX Fora do Limite (181)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=181.0&posY=0.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "181.0"
+								},
+								{
+									"key": "posY",
+									"value": "0.0"
+								}
+							]
+						},
+						"description": "Tenta buscar agências com posX > 180 (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - posX Fora do Limite (-181)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=-181.0&posY=0.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "-181.0"
+								},
+								{
+									"key": "posY",
+									"value": "0.0"
+								}
+							]
+						},
+						"description": "Tenta buscar agências com posX < -180 (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - posY Fora do Limite (91)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=0.0&posY=91.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "0.0"
+								},
+								{
+									"key": "posY",
+									"value": "91.0"
+								}
+							]
+						},
+						"description": "Tenta buscar agências com posY > 90 (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - posY Fora do Limite (-91)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=0.0&posY=-91.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "0.0"
+								},
+								{
+									"key": "posY",
+									"value": "-91.0"
+								}
+							]
+						},
+						"description": "Tenta buscar agências com posY < -90 (deve retornar erro 400)"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - Valores Não Numéricos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=abc&posY=def",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "abc"
+								},
+								{
+									"key": "posY",
+									"value": "def"
+								}
+							]
+						},
+						"description": "Tenta buscar agências com valores não numéricos (deve retornar erro 400)"
+					},
+					"response": []
+				}
+			],
+			"description": "Casos de erro para busca de agências próximas"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

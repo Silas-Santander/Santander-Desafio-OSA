@@ -1,0 +1,36 @@
+# Arquivos compilados
+*.class
+*.jar
+*.war
+
+# Maven
+target/
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# VS Code
+.vscode/
+
+# Logs
+*.log
+
+# Banco de dados H2
+*.h2.db
+*.trace.db
+*.lock.db
+
+# Relatórios de teste
+surefire-reports/
+jacoco.exec
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# Configurações locais
+application-local.yml
+application-local.properties

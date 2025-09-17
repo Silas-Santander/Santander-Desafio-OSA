@@ -1,0 +1,506 @@
+{
+	"info": {
+		"_postman_id": "2b3ae6e2-8706-4772-9e3b-48551057ab01",
+		"name": "Agência API - Casos de Sucesso",
+		"description": "Collection com casos de teste de sucesso para a API de Agências",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "44229383"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Agência - Casos de Sucesso",
+			"item": [
+				{
+					"name": "Cadastrar Agência - Posição Centro (0,0)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": 0.0,\n    \"posY\": 0.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Cadastra uma agência na posição central (0,0)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - São Paulo",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": -46.6333,\n    \"posY\": -23.5505\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Cadastra uma agência em São Paulo"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - Rio de Janeiro",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": -43.1729,\n    \"posY\": -22.9068\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Cadastra uma agência no Rio de Janeiro"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - Brasília",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": -47.8825,\n    \"posY\": -15.7942\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Cadastra uma agência em Brasília"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - Limite Norte (0, 90)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": 0.0,\n    \"posY\": 90.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Cadastra uma agência no limite norte (Polo Norte)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - Limite Sul (0, -90)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": 0.0,\n    \"posY\": -90.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Cadastra uma agência no limite sul (Polo Sul)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - Limite Oeste (-180, 0)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": -180.0,\n    \"posY\": 0.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Cadastra uma agência no limite oeste (Linha Internacional de Data)"
+					},
+					"response": []
+				},
+				{
+					"name": "Cadastrar Agência - Limite Leste (180, 0)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"posX\": 180.0,\n    \"posY\": 0.0\n}"
+						},
+						"url": {
+							"raw": "{{base_url}}/desafio/cadastrar",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"cadastrar"
+							]
+						},
+						"description": "Cadastra uma agência no limite leste (Linha Internacional de Data)"
+					},
+					"response": []
+				}
+			],
+			"description": "Casos de sucesso para cadastro de agências"
+		},
+		{
+			"name": "Buscar Agências Próximas - Casos de Sucesso",
+			"item": [
+				{
+					"name": "Buscar Agências - Centro (0,0)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=0.0&posY=0.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "0.0"
+								},
+								{
+									"key": "posY",
+									"value": "0.0"
+								}
+							]
+						},
+						"description": "Busca agências próximas ao centro (0,0)"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - São Paulo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=-46.6333&posY=-23.5505",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "-46.6333"
+								},
+								{
+									"key": "posY",
+									"value": "-23.5505"
+								}
+							]
+						},
+						"description": "Busca agências próximas a São Paulo"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - Rio de Janeiro",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=-43.1729&posY=-22.9068",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "-43.1729"
+								},
+								{
+									"key": "posY",
+									"value": "-22.9068"
+								}
+							]
+						},
+						"description": "Busca agências próximas ao Rio de Janeiro"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - Brasília",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=-47.8825&posY=-15.7942",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "-47.8825"
+								},
+								{
+									"key": "posY",
+									"value": "-15.7942"
+								}
+							]
+						},
+						"description": "Busca agências próximas a Brasília"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - Limite Norte (0, 90)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=0.0&posY=90.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "0.0"
+								},
+								{
+									"key": "posY",
+									"value": "90.0"
+								}
+							]
+						},
+						"description": "Busca agências próximas ao Polo Norte"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - Limite Sul (0, -90)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=0.0&posY=-90.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "0.0"
+								},
+								{
+									"key": "posY",
+									"value": "-90.0"
+								}
+							]
+						},
+						"description": "Busca agências próximas ao Polo Sul"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - Limite Oeste (-180, 0)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=-180.0&posY=0.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "-180.0"
+								},
+								{
+									"key": "posY",
+									"value": "0.0"
+								}
+							]
+						},
+						"description": "Busca agências próximas ao limite oeste"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Agências - Limite Leste (180, 0)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/desafio/distancia?posX=180.0&posY=0.0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"desafio",
+								"distancia"
+							],
+							"query": [
+								{
+									"key": "posX",
+									"value": "180.0"
+								},
+								{
+									"key": "posY",
+									"value": "0.0"
+								}
+							]
+						},
+						"description": "Busca agências próximas ao limite leste"
+					},
+					"response": []
+				}
+			],
+			"description": "Casos de sucesso para busca de agências próximas"
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
